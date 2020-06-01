@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Survey Page</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Ghibli Fanpage Survey Form</h1>
+      <p id="description">
+        Thank you for taking your time to help us improve our fanpage!
+      </p>
+    </header>
+    <form  id="survey-form" method="post">
+        <div class="form-input">
+          <div class="label">
+            <label id="name-label" for="name">Name</label>
+          </div>
+          <div class="answer">
+            <input id="name" type="text" name="name"
+            placeholder="Enter your name"
+            required>
+          </div>
+        </div>
+        <div class="form-input">
+          <div class="label">
+            <label id="email-label" for="email">Email</label>
+          </div>
+          <div class="answer">
+            <input id="email" type="email" name="email"
+            placeholder="Enter your email"
+            required>
+          </div>
+        </div>
+        <div class="form-input">
+          <div class="label">
+            <label id="number-label" for="number" >How old was you when you first watched Ghibli movies?</label>
+          </div>
+          <div class="answer">
+            <input id="number" type="number" name="number"
+            min="0" max="100"
+            placeholder="Enter your age here"
+            required>
+          </div>
+        </div>
+        <div class="form-input">
+          <div class="label">
+            <label id="dropdown-label" for="dropdown">What is your favorite Ghibli movie?</label>
+          </div>
+          <div class="answer">
+            <select id="dropdown" name="dropdown" id="dropdown">
+              <option value="">--Please choose an option--</option>
+              <option value="spirited-away">Spirited Away</option>
+              <option value="princess-mononoke">Princess Mononoke</option>
+              <option value="laputa">Laputa, the Castle in the Sky</option>
+              <option value="only-yesterday">Only Yesterday</option>
+              <option value="kiki">Kiki Delivery Service</option>
+              <option value="howl">Howl Moving Castle</option>
+              <option value="ghost-in-the-shell">Ghost in the Shell</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-input">
+          <div class="label">Would you recommend Ghibli movies to your friend?</div>
+          <div class="answer">
+              <label>
+              <input type="radio"  name="fan-recommend" value="yes" checked>
+              Definitely</label>
+              <label>
+              <input type="radio"  name="fan-recommend" value="no">
+              Not Sure</label>
+              <label>
+              <input type="radio"  name="fan-recommend" value="may-be">
+              May be</label>
+          </div>
+        </div>
+        <div class="form-input">
+          <div class="label" for="checkbox">Where do you often watch Ghibli movies?</div>
+          <div class="answer">
+            <label>
+              <input type="checkbox" name="where-watch" value="movie-theaters">
+              Movie theaters
+            </label>
+            <label>
+              <input type="checkbox" name="where-watch" value="dvd">
+              DVDs
+            </label>
+            <label>
+              <input type="checkbox" name="where-watch" value="netflix">
+              Netflix
+            </label>
+            <label>
+              <input type="checkbox" name="where-watch" value="youtube">
+              Youtube
+            </label>
+            <label>
+              <input type="checkbox" name="where-watch" value="others">
+              Others
+            </label>
+          </div>
+        </div>
+        <div class="form-input">
+          <div class="label">
+            <label id="text-area-label" for="textarea">Any Comments or Suggestions?</label>
+          </div>
+          <div class="answer">
+            <textarea id="textarea" name="textarea"
+            rows="10" cols="10">Enter your text here
+            </textarea>
+          </div>
+        </div>
+        <div class="form-input">
+          <input id="submit" type="submit" value="Submit">
+        </div>
+    </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

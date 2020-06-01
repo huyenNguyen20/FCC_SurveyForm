@@ -1,0 +1,130 @@
+html{
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("https://cdn.hipwallpaper.com/m/26/92/MYX7nc.jpg");
+  background-size: cover;
+}
+header{
+  color: #fcf876;
+  text-align: center;
+}
+h1{
+  font-size: 300%;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  margin-bottom: 0;
+}
+h1:after{
+  content:"";
+  display: block;
+  background-color: #fcf876;
+  width: 10%;
+  height: 1px;
+  margin-left: 45%;
+  margin-top: 5px;
+}
+form{
+  margin-top: 40px;
+  max-width: 60%;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 25px;
+  border: 1px solid #fcf876;
+}
+.form-input{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  padding: 10px;
+}
+.label{
+  grid-area: 1/1/1/3;
+}
+.answer{
+  grid-area: 1/3/1/6;
+  padding-left: 40px;
+}
+.answer label{
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea{
+  display: block;
+  width: 90%;
+  font-family: 'Lato', sans-serif;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: 1px solid #cdcdcd;
+  background-color: #e6e6e6;
+}
+*:focus{
+  outline: none;
+}
+#submit{
+  display: block;
+  grid-area: 1/2/1/5;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: #ffcd3c;
+  border: 1px solid #ff9234;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  margin-top: 20px;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+#submit:hover{
+  background-color: #ff9234;
+  box-shadow: 2px 2px 2px #c0c0c0;
+}
+@media(max-width: 1024px){
+  form{
+    max-width: 70%;
+  }
+}
+@media(max-width: 768px){
+  form{
+    max-width: 90%;
+  }
+  h1{
+    font-size: 200%;
+  }
+}
+@media(max-width: 480px){
+  form{
+    max-width: 100%;
+  }
+  .form-input{
+    display: grid;
+    grid-template-areas:
+    "label label label label label"
+    "answer answer answer answer answer";
+  }
+  .label{
+    grid-area: label;
+  }
+  .answer{
+    grid-area: answer;
+    padding: 0px;
+    padding-top: 10px;
+  }
+  #submit{
+    grid-area: label;
+    margin-right: 30px;
+  }
+  #description{
+    width: 80%;
+    margin-left: 10%
+  }
+}
